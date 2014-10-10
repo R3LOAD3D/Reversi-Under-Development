@@ -1,0 +1,9 @@
+C:\Users\Amin\Documents\Visual Studio 2013\Projects\WindowsFormsApplication4\WindowsFormsApplication4\bin\Debug\WindowsFormsApplication4.exe.config
+C:\Users\Amin\Documents\Visual Studio 2013\Projects\WindowsFormsApplication4\WindowsFormsApplication4\obj\Debug\WindowsFormsApplication4.exe
+C:\Users\Amin\Documents\Visual Studio 2013\Projects\WindowsFormsApplication4\WindowsFormsApplication4\obj\Debug\WindowsFormsApplication4.pdb
+C:\Users\Amin\Documents\Visual Studio 2013\Projects\WindowsFormsApplication4\WindowsFormsApplication4\bin\Debug\WindowsFormsApplication4.exe
+C:\Users\Amin\Documents\Visual Studio 2013\Projects\WindowsFormsApplication4\WindowsFormsApplication4\bin\Debug\WindowsFormsApplication4.pdb
+C:\Users\Amin\Documents\Visual Studio 2013\Projects\WindowsFormsApplication4\WindowsFormsApplication4\obj\Debug\Reversi-Under Development.csprojResolveAssemblyReference.cache
+C:\Users\Amin\Documents\Visual Studio 2013\Projects\WindowsFormsApplication4\WindowsFormsApplication4\obj\Debug\WindowsFormsApplication4.Form1.resources
+C:\Users\Amin\Documents\Visual Studio 2013\Projects\WindowsFormsApplication4\WindowsFormsApplication4\obj\Debug\WindowsFormsApplication4.Properties.Resources.resources
+C:\Users\Amin\Documents\Visual Studio 2013\Projects\WindowsFormsApplication4\WindowsFormsApplication4\obj\Debug\Reversi-Under Development.csproj.GenerateResource.Cache
