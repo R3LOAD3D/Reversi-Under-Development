@@ -105,11 +105,7 @@ namespace WindowsFormsApplication4
         }
 
 
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
-
+  
         private void button1_Click(object sender, EventArgs e) //New game
         {
             for (int x = 0; x < numvak; x++)
