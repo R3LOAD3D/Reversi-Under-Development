@@ -124,7 +124,7 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(70, 25);
             this.label1.TabIndex = 11;
-            this.label1.Text = "label1";
+            this.label1.Text = "0";
             // 
             // label2
             // 
@@ -133,7 +133,7 @@
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(70, 25);
             this.label2.TabIndex = 12;
-            this.label2.Text = "label2";
+            this.label2.Text = "0";
             // 
             // Form1
             // 

@@ -77,6 +77,7 @@ namespace WindowsFormsApplication4
                }
            }
            Label1_Teller();
+           TextBox3_Speler();
         }
 
 
@@ -84,6 +85,7 @@ namespace WindowsFormsApplication4
         {
             Pen myPen = new Pen(Color.Black);
             myPen.Width = 3;
+            
 
             e.Graphics.FillEllipse(Brushes.Blue, numvak / 2 * gridvaksize, numvak / 2 * gridvaksize, gridvaksize, gridvaksize);
             e.Graphics.FillEllipse(Brushes.Blue, numvak / 2 * gridvaksize - gridvaksize, numvak / 2 * gridvaksize - gridvaksize, gridvaksize, gridvaksize);
@@ -118,7 +120,10 @@ namespace WindowsFormsApplication4
                     
             }
             speleraanzet = "Blauw";
+            
             panel1.Invalidate();
+            label1.Text = "0";
+            label2.Text = "0";
 
         }
 
@@ -150,7 +155,13 @@ namespace WindowsFormsApplication4
             Invalidate();
         }
 
-       void Label1_Teller()
+        private void TextBox3_Speler()
+        {
+            string SpelerX = speleraanzet;
+            textBox3.Text = SpelerX;
+        }
+
+        private void Label1_Teller()
         {
             int teller1 = 0;
             int teller2 = 0;
