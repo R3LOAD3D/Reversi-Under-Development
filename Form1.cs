@@ -14,9 +14,14 @@ namespace WindowsFormsApplication4
     {
         int numvak = 8;
         int gridvaksize = 60;
+        //int xPanel = 12; -> voor coordinatie grid
+        //int yPanel = 106; -> ""
         string speleraanzet = "Blauw";
         int[,] tegels = new int[8, 8];
         
+
+
+
 
         public Form1()
         {
@@ -26,7 +31,10 @@ namespace WindowsFormsApplication4
             panel1.Paint += new PaintEventHandler(panel1_Paint);
             panel3.Paint += new PaintEventHandler(panel3_Paint);
             panel1.MouseClick += panel1_MouseClick;
-             
+
+
+
+                
         }
 
 
@@ -97,6 +105,11 @@ namespace WindowsFormsApplication4
         }
 
 
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
         private void button1_Click(object sender, EventArgs e) //New game
         {
             for (int x = 0; x < numvak; x++)
@@ -119,6 +132,14 @@ namespace WindowsFormsApplication4
         private void button3_Click(object sender, EventArgs e) //Help
         {
             
+        }
+
+      
+
+        
+        private void panel1_Paint_1(object sender, PaintEventArgs e)
+        {
+
         }
 
         private void panel3_Paint(object sender, PaintEventArgs e) //panel-positie voor tussenstand rode cirkels1
