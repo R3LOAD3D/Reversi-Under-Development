@@ -18,7 +18,7 @@ namespace WindowsFormsApplication4
         //int yPanel = 106; -> ""
         string speleraanzet = "Blauw";
         int[,] tegels = new int[8, 8];
-
+        
 
 
 
@@ -76,12 +76,17 @@ namespace WindowsFormsApplication4
                    speleraanzet = "Blauw";
                }
            }
+           tegels[4, 4] = 1;
+           tegels[4, 3] = -1;
+           tegels[3, 3] = 1;
+           tegels[3, 4]= -1;
+
            Label1_Teller();
            TextBox3_Speler();
         }
 
 
-        private void panel1_Paint(object obj, PaintEventArgs e)
+        private void panel1_Paint(object obj, PaintEventArgs e) // tekenen van de Grid
         {
             Pen myPen = new Pen(Color.Black);
             myPen.Width = 3;
@@ -99,10 +104,6 @@ namespace WindowsFormsApplication4
             }
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -122,8 +123,9 @@ namespace WindowsFormsApplication4
             speleraanzet = "Blauw";
             
             panel1.Invalidate();
-            label1.Text = "0";
-            label2.Text = "0";
+            label1.Text = "2";
+            label2.Text = "2";
+            TextBox3_Speler();
 
         }
 

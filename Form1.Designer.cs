@@ -38,6 +38,9 @@
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -104,7 +107,7 @@
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(195, 30);
             this.textBox3.TabIndex = 9;
-            this.textBox3.Text = "X-speler aan zet";
+            this.textBox3.Text = "Blauw";
             this.textBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // textBox4
@@ -114,7 +117,7 @@
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(195, 30);
             this.textBox4.TabIndex = 10;
-            this.textBox4.Text = "Winnaar - Game";
+            this.textBox4.Text = "Nog niet bekend!";
             this.textBox4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label1
@@ -122,24 +125,54 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(655, 137);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(70, 25);
+            this.label1.Size = new System.Drawing.Size(24, 25);
             this.label1.TabIndex = 11;
-            this.label1.Text = "0";
+            this.label1.Text = "2";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(655, 225);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(70, 25);
+            this.label2.Size = new System.Drawing.Size(24, 25);
             this.label2.TabIndex = 12;
-            this.label2.Text = "0";
+            this.label2.Text = "2";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(553, 298);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(64, 25);
+            this.label3.TabIndex = 13;
+            this.label3.Text = "Turn:";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(553, 362);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(88, 25);
+            this.label4.TabIndex = 14;
+            this.label4.Text = "Winner:";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(638, 82);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(71, 25);
+            this.label5.TabIndex = 15;
+            this.label5.Text = "aantal";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(750, 600);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox4);
@@ -172,6 +205,9 @@
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
     }
 }
 
