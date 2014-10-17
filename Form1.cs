@@ -14,14 +14,9 @@ namespace WindowsFormsApplication4
     {
         int numvak = 8;
         int gridvaksize = 60;
-        //int xPanel = 12; -> voor coordinatie grid
-        //int yPanel = 106; -> ""
         string speleraanzet = "Blauw";
         int[,] tegels = new int[8, 8];
-
-
-
-
+        bool helpfunctie = false;
 
         public Form1()
         {
@@ -38,11 +33,45 @@ namespace WindowsFormsApplication4
         }
 
 
-        private bool ValidMove(int MouseX, int MouseY)
+        private bool ValidMove(int MouseX, int MouseY, int PlayerColour)
         {
             if (tegels[MouseX, MouseY] == 0)
             {
-                return true;
+                for (int dx = -1; dx < 2; dx++ )
+                {
+                    for (int dy = -1; dy < 2; dy++)
+                    {
+                        try
+                        {
+                            int offset = 1;
+                            while (tegels[MouseX + dx * offset, MouseY + dy * offset] == -PlayerColour)
+                            {
+                                offset++;
+
+                            }
+
+                            if (offset == 1)
+                            {
+                                continue;
+
+                            }
+                            if (tegels[MouseX + dx * offset, MouseY + dy * offset] == PlayerColour)
+                            {
+
+                                return true;
+                            }
+
+                        }
+                        catch(Exception)
+                        {
+
+
+                        }
+
+                    }
+
+                }
+                    
 
             }
             return false;
@@ -59,32 +88,31 @@ namespace WindowsFormsApplication4
             Graphics gr = this.panel1.CreateGraphics();
             if (speleraanzet == "Blauw")
             {
-                if (ValidMove(MouseX, MouseY))
+                if (ValidMove(MouseX, MouseY, 1))
                 {
                     tegels[MouseX, MouseY] = 1;
-                    gr.FillEllipse(Brushes.Blue, MouseX * gridvaksize, MouseY * gridvaksize, gridvaksize, gridvaksize);
+ 
+                    panel1.Invalidate();
                     speleraanzet = "Rood";
                 }
 
             }
             else
             {
-                if (ValidMove(MouseX, MouseY))
+                if (ValidMove(MouseX, MouseY, -1))
                 {
                     tegels[MouseX, MouseY] = -1;
-                    gr.FillEllipse(Brushes.Red, MouseX * gridvaksize, MouseY * gridvaksize, gridvaksize, gridvaksize);
+                    panel1.Invalidate();
                     speleraanzet = "Blauw";
                 }
             }
-            tegels[4, 4] = 1;
-            tegels[4, 3] = -1;
-            tegels[3, 3] = 1;
-            tegels[3, 4] = -1;
+            
 
             Label1_Teller();
             TextBox3_Speler();
         }
 
+      
 
         private void panel1_Paint(object obj, PaintEventArgs e) // tekenen van de Grid
         {
@@ -102,6 +130,28 @@ namespace WindowsFormsApplication4
                 e.Graphics.DrawLine(myPen, 0, y * gridvaksize, gridvaksize * numvak, y * gridvaksize); // Horizontal Grid Lines
 
             }
+
+            for (int xgrid = 0; xgrid < numvak; xgrid++)
+            {
+                for(int ygrid = 0; ygrid < numvak; ygrid++)
+                {
+                    
+                    if(tegels[xgrid, ygrid] == 1)
+                    {
+                        e.Graphics.FillEllipse(Brushes.Blue, xgrid * gridvaksize, ygrid * gridvaksize, gridvaksize, gridvaksize);
+
+                    }
+                    if(tegels[xgrid, ygrid] == -1)
+                    {
+                        e.Graphics.FillEllipse(Brushes.Red, xgrid * gridvaksize, ygrid * gridvaksize, gridvaksize, gridvaksize);
+                    }
+                }
+            }
+
+                tegels[4, 4] = 1;
+            tegels[4, 3] = -1;
+            tegels[3, 3] = 1;
+            tegels[3, 4] = -1;
         }
 
 
@@ -125,12 +175,17 @@ namespace WindowsFormsApplication4
 
         }
 
-        private void button3_Click(object sender, EventArgs e) //Help
+        private void Helpfunctie()
         {
+            
 
         }
 
 
+        private void button3_Click(object sender, EventArgs e) //Help
+        {
+            helpfunctie = !helpfunctie;
+        }
 
 
         private void panel1_Paint_1(object sender, PaintEventArgs e)
