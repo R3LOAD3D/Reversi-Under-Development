@@ -91,7 +91,6 @@ namespace WindowsFormsApplication4
                 if (ValidMove(MouseX, MouseY, 1))
                 {
                     tegels[MouseX, MouseY] = 1;
- 
                     panel1.Invalidate();
                     speleraanzet = "Rood";
                 }
@@ -113,6 +112,47 @@ namespace WindowsFormsApplication4
         }
 
       
+        private void ColourChange
+        { 
+        
+            
+                for (int dx = -1; dx < 2; dx++ )
+                {
+                    for (int dy = -1; dy < 2; dy++)
+                    {
+                        try
+                        {
+                            int offset = 1;
+                            while (tegels[MouseX + dx * offset, MouseY + dy * offset] == -PlayerColour)
+                            {
+                                offset++;
+
+                            }
+
+                            if (offset == 1)
+                            {
+                                continue;
+
+                            }
+                            if (tegels[MouseX + dx * offset, MouseY + dy * offset] == PlayerColour)
+                            {
+
+                                return true;
+                            }
+
+                        }
+                        catch(Exception)
+                        {
+
+
+                        }
+
+                    }
+
+                }
+                    
+        
+        }
 
         private void panel1_Paint(object obj, PaintEventArgs e) // tekenen van de Grid
         {
